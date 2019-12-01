@@ -1,4 +1,4 @@
-package Model;
+package CarModel;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +8,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import java.io.Serializable;
 import java.util.List;
 
 
@@ -69,7 +68,7 @@ getSession().delete(car);
 
     public List<Car> findAll() {
 
-        List<Car> cars = getSession().createQuery("from Car").list();
+        List<Car> cars = getSession().createQuery("from Car").list();  //tutaj jest ważna rzecz bo podajemy nazwę klasy
         return cars;
     }
 
